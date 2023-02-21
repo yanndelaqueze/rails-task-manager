@@ -1,0 +1,11 @@
+<div class="container">
+  <%= form_with model: @task do |f| %>
+    <%= f.label :title , class: "form-label mt-3" %>
+    <%= f.text_field :title , class: "form-control mt-3" %>
+    <%= f.label :details , class: "form-label mt-3" %>
+    <%= f.text_field :details , class: "form-control mt-3" %>
+    <%= f.label :completed , class: "form-label mt-3" %>
+    <%= f.check_box :completed, {}, false, true %>
+    <%= f.submit class: "btn btn-warning mt-3"%>
+  <% end %>
+</div>

@@ -1,0 +1,13 @@
+<div class="container">
+  <h1 class = "text-center">Tasks</h1>
+  <ul>
+    <% @tasks.each do |task|  %>
+    <% if task.completed %>
+      <li class = "list-group-item"><i class="fa-regular fa-square-check"></i><%= link_to task.title, task_path(task), class: "text-decoration-none" %></li>
+    <% else %>
+    <li class = "list-group-item"><i class="fa-regular fa-square"></i><%= link_to task.title, task_path(task), class: "text-decoration-none" %></li>
+      <% end %>
+    <% end %>
+    <%= link_to "Create new Task", task_new_path, class: "btn btn-primary mt-3"  %>
+  </ul>
+</div>
